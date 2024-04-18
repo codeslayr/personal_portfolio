@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ServiceViewWeb extends StatelessWidget {
-  const ServiceViewWeb({super.key});
+class SkillViewMobile extends StatelessWidget {
+  const SkillViewMobile({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class ServiceViewWeb extends StatelessWidget {
       height: MediaQuery.of(context).size.height,
       color: Colors.white,
       child: Center(
-        child: Text("Service View Web"),
+        child: Text("About View mobile"),
       ),
     );
   }

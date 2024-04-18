@@ -1,7 +1,12 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/views/core_skill_view.dart';
+import 'package:personal_portfolio/views/figma_view.dart';
+import 'package:personal_portfolio/views/flutter_view.dart';
+import 'package:personal_portfolio/views/fluttweb_view.dart';
 import 'package:personal_portfolio/views/home_view.dart';
-import 'package:personal_portfolio/views/service_view.dart';
+import 'package:personal_portfolio/views/about_view.dart';
+import 'package:personal_portfolio/views/skill_view.dart';
 
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
@@ -102,8 +107,13 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   final List<Widget> _myList = [
-    const ServiceView(),
-    const ServiceView(),
+    const AboutView(),
+    const AboutView(),
+    const CoreSkillView(),
+    const SkillView(),
+    const FlutterView(),
+    const FigmaView(),
+    const FluttwebView(),
   ];
 
   @override

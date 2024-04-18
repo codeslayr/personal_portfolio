@@ -1,0 +1,85 @@
+import 'package:flutter/material.dart';
+import 'package:personal_portfolio/constants/color_consts.dart';
+import 'package:personal_portfolio/constants/text_consts.dart';
+
+class ImageWithStackedButton extends StatelessWidget {
+  final String image;
+  final String text;
+  final VoidCallback onPressed;
+
+  const ImageWithStackedButton({
+    Key? key,
+    required this.image,
+    required this.onPressed,
+    required this.text,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      // color: Colors.amber,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: 415,
+            height: 380,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(28)),
+                color: softWhiteCustomColor),
+            child: Stack(
+              children: [
+                Positioned(
+                  left: 70,
+                  top: 70,
+                  child: Image.asset(
+                    image,
+                    width: 250,
+                    height: 250,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Positioned(
+                  bottom: 20,
+                  right: 40,
+                  child: _buildStackedButton(),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: MediaQuery.of(context).size.height / 20),
+          Container(
+              padding: EdgeInsets.symmetric(vertical: 15, horizontal: 32),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(26)),
+                  color: softWhiteCustomColor),
+              child: Text(
+                text,
+                style: kSmallParaTextStyle,
+              ))
+        ],
+      ),
+    );
+  }
+
+  Widget _buildStackedButton() {
+    return GestureDetector(
+      onTap: onPressed,
+      child: Container(
+        width: 60,
+        height: 60,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: NavyBlueCustomColor,
+        ),
+        child: Center(
+          child: Icon(
+            Icons.arrow_outward_outlined,
+            size: 32,
+            color: Colors.white,
+          ),
+        ),
+      ),
+    );
+  }
+}
