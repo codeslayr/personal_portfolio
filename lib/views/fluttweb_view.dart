@@ -9,7 +9,7 @@ class FluttwebView extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (builder, constraints) {
       if (constraints.maxWidth < 600) {
-        return const FluttWebViewMobile();
+        return Container();
       } else {
         return Container(
           color: Colors.white,

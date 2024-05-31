@@ -1,12 +1,15 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/firebase_options.dart';
 import 'package:personal_portfolio/views/core_skill_view.dart';
 import 'package:personal_portfolio/views/figma_view.dart';
 import 'package:personal_portfolio/views/flutter_view.dart';
 import 'package:personal_portfolio/views/fluttweb_view.dart';
+import 'package:personal_portfolio/views/footer_view.dart';
 import 'package:personal_portfolio/views/home_view.dart';
 import 'package:personal_portfolio/views/about_view.dart';
 import 'package:personal_portfolio/views/skill_view.dart';
+import 'package:personal_portfolio/views/testimonial_view.dart';
 
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
@@ -18,13 +21,8 @@ void main() {
 
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
-  final Future<FirebaseApp> _initialization = Firebase.initializeApp(
-      options: FirebaseOptions(
-          apiKey: "AIzaSyBkGR4AEhZ7u1FU3qlq7s6K0rdndYiYEwc",
-          appId: "787209101930",
-          messagingSenderId: "787209101930",
-          projectId: "abcartio",
-          storageBucket: "abcartio.appspot.com"));
+  final Future<FirebaseApp> _initialization =
+      Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   // This widget is the root of your application.
   @override
@@ -85,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void toService() {
+  void toCoreSkill() {
     setState(() {
       _scrollController.scrollTo(
           index: 2, duration: const Duration(milliseconds: 500));
@@ -95,26 +93,56 @@ class _MyHomePageState extends State<MyHomePage> {
   void toProject() {
     setState(() {
       _scrollController.scrollTo(
-          index: 3, duration: const Duration(milliseconds: 500));
+          index: 4, duration: const Duration(milliseconds: 500));
     });
   }
 
   void toTestimonial() {
     setState(() {
       _scrollController.scrollTo(
-          index: 6, duration: const Duration(milliseconds: 500));
+          index: 7, duration: const Duration(milliseconds: 500));
+    });
+  }
+
+  void toFlutter() {
+    setState(() {
+      _scrollController.scrollTo(
+          index: 4, duration: const Duration(milliseconds: 500));
+    });
+  }
+
+  void toFigma() {
+    setState(() {
+      _scrollController.scrollTo(
+          index: 4, duration: const Duration(milliseconds: 500));
+    });
+  }
+
+  void toFlutterWeb() {
+    setState(() {
+      _scrollController.scrollTo(
+          index: 4, duration: const Duration(milliseconds: 500));
+    });
+  }
+
+  void toFooter() {
+    setState(() {
+      _scrollController.scrollTo(
+          index: 8, duration: const Duration(milliseconds: 500));
     });
   }
 
   final List<Widget> _myList = [
     const AboutView(),
     const AboutView(),
-    const CoreSkillView(),
+    const AboutView(),
     const SkillView(),
     const FlutterView(),
-    const FigmaView(),
-    const FluttwebView(),
+    const FooterView(),
   ];
+
+  // const FigmaView(),
+  // const FluttwebView(),
 
   @override
   Widget build(BuildContext context) {
@@ -123,7 +151,20 @@ class _MyHomePageState extends State<MyHomePage> {
       itemCount: _myList.length,
       itemBuilder: (context, index) {
         if (index == 0) {
-          return HomeView();
+          return HomeView(
+            toHome: toHome,
+            toAbout: toAbout,
+            toCoreSkill: toCoreSkill,
+            toProject: toProject,
+            toTestimonial: toTestimonial,
+            toFooter: toFooter,
+          );
+          // return AboutView();
+        } else if (index == 2) {
+          return CoreSkillView(
+              toFlutter: toFlutter,
+              toFigma: toFigma,
+              toFlutterWeb: toFlutterWeb);
         } else {
           return _myList[index];
         }

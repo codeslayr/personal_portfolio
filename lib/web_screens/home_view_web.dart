@@ -2,7 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:personal_portfolio/constants/text_consts.dart';
 
 class HomeViewWeb extends StatefulWidget {
-  const HomeViewWeb({super.key});
+  const HomeViewWeb({
+    super.key,
+    required this.toHome,
+    required this.toAbout,
+    required this.toService,
+    required this.toProject,
+    required this.toTestimonial,
+    required this.toFooter,
+  });
+
+  final Function toHome;
+  final Function toAbout;
+  final Function toService;
+  final Function toProject;
+  final Function toTestimonial;
+  final Function toFooter;
 
   @override
   State<HomeViewWeb> createState() => _HomeViewWebState();
@@ -36,6 +51,7 @@ class _HomeViewWebState extends State<HomeViewWeb> {
                         onTap: () {
                           setState(() {
                             _selectedIndex = 0;
+                            widget.toHome();
                           });
                         },
                         child: _buildNavItem('Home', _selectedIndex == 0),
@@ -44,6 +60,7 @@ class _HomeViewWebState extends State<HomeViewWeb> {
                         onTap: () {
                           setState(() {
                             _selectedIndex = 1;
+                            widget.toAbout();
                           });
                         },
                         child: _buildNavItem('About', _selectedIndex == 1),
@@ -52,9 +69,10 @@ class _HomeViewWebState extends State<HomeViewWeb> {
                         onTap: () {
                           setState(() {
                             _selectedIndex = 2;
+                            widget.toService();
                           });
                         },
-                        child: _buildNavItem('Service', _selectedIndex == 2),
+                        child: _buildNavItem('Skills', _selectedIndex == 2),
                       ),
                     ],
                   ),
@@ -69,22 +87,16 @@ class _HomeViewWebState extends State<HomeViewWeb> {
                         onTap: () {
                           setState(() {
                             _selectedIndex = 3;
+                            widget.toProject();
                           });
                         },
-                        child: _buildNavItem('Resume', _selectedIndex == 3),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            _selectedIndex = 4;
-                          });
-                        },
-                        child: _buildNavItem('Project', _selectedIndex == 4),
+                        child: _buildNavItem('Projects', _selectedIndex == 3),
                       ),
                       GestureDetector(
                         onTap: () {
                           setState(() {
                             _selectedIndex = 5;
+                            widget.toFooter();
                           });
                         },
                         child: _buildNavItem('Contact', _selectedIndex == 5),
@@ -121,8 +133,9 @@ class _HomeViewWebState extends State<HomeViewWeb> {
                     Text(
                       "Flutter Full Stack Developer",
                       style: kMediumParaTextStyle.copyWith(
-                          fontWeight: FontWeight.w700,
+                          fontWeight: FontWeight.w500,
                           fontSize: 40,
+                          letterSpacing: -2,
                           color: Colors.black.withOpacity(0.8)),
                     ),
                   ],

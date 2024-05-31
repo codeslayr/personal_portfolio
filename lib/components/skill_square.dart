@@ -17,34 +17,34 @@ class ImageWithStackedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // color: Colors.amber,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            width: 415,
-            height: 380,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(28)),
-                color: softWhiteCustomColor),
-            child: Stack(
-              children: [
-                Positioned(
-                  left: 70,
-                  top: 70,
-                  child: Image.asset(
-                    image,
-                    width: 250,
-                    height: 250,
-                    fit: BoxFit.cover,
+          AspectRatio(
+            aspectRatio: 1,
+            child: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(28)),
+                  color: softWhiteCustomColor),
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment.center,
+                    child: Padding(
+                      padding: const EdgeInsets.all(24.0),
+                      child: Image.asset(
+                        image,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
-                ),
-                Positioned(
-                  bottom: 20,
-                  right: 40,
-                  child: _buildStackedButton(),
-                ),
-              ],
+                  Positioned(
+                    bottom: 20,
+                    right: 40,
+                    child: _buildStackedButton(),
+                  ),
+                ],
+              ),
             ),
           ),
           SizedBox(height: MediaQuery.of(context).size.height / 20),
@@ -56,7 +56,7 @@ class ImageWithStackedButton extends StatelessWidget {
               child: Text(
                 text,
                 style: kSmallParaTextStyle,
-              ))
+              )),
         ],
       ),
     );

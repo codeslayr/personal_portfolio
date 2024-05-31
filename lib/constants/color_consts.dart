@@ -17,3 +17,5 @@ Color BlackAccentCustomColor = const Color(0xFF161C2D).withOpacity(0.2);
 Color PurpleCustomColor = const Color(0xFF583EBC);
 Color OrangeCustomColor = const Color(0xFFFD853A);
 Color NavyBlueCustomColor = const Color(0xFF1D2939);
+Color GrayBackgroundCustomColor = const Color(0xFF272727);
+Color GrayCustomColorTextEnd = const Color(0xFF929292);

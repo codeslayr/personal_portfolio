@@ -57,7 +57,7 @@ class SkillViewWeb extends StatelessWidget {
                         image: 'assets/images/firebase.png',
                         title: "Firebase",
                         subtitle:
-                            "Have a profound experience in git and github.",
+                            "Firebase Firestore, Firebase Authentication and more",
                         image2: 'assets/images/firebase2.png',
                         i2width: 222,
                         i2height: 200)
@@ -73,8 +73,7 @@ class SkillViewWeb extends StatelessWidget {
                         height: 340,
                         image: 'assets/images/postman.png',
                         title: "Postman",
-                        subtitle:
-                            "Have a profound experience in git and github.",
+                        subtitle: "Testing APIs and automating using postman.",
                         image2: 'assets/images/postman2.png',
                         i2width: 304,
                         i2height: 150),
@@ -84,7 +83,7 @@ class SkillViewWeb extends StatelessWidget {
                         image: 'assets/images/playstore.png',
                         title: "Play Console",
                         subtitle:
-                            "Have a profound experience in git and github.",
+                            "Publishing apps on playstore and managing them.",
                         image2: 'assets/images/playstore2.png',
                         i2width: 304,
                         i2height: 150),
@@ -93,7 +92,7 @@ class SkillViewWeb extends StatelessWidget {
                       height: 300,
                       image: 'assets/images/web.png',
                       title: 'Web',
-                      subtitle: 'Have a profound experience in git and github.',
+                      subtitle: 'Utilizing Flutter web for web applications.',
                       image2: 'assets/images/web2.png',
                       i2width: 179,
                       i2height: 256,

@@ -2,9 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:personal_portfolio/components/skill_square.dart';
 import 'package:personal_portfolio/constants/text_consts.dart';
 
-class CoreSkillViewWeb extends StatelessWidget {
-  const CoreSkillViewWeb({super.key});
+class CoreSkillViewWeb extends StatefulWidget {
+  const CoreSkillViewWeb(
+      {super.key,
+      required this.toFlutter,
+      required this.toFigma,
+      required this.toFlutterWeb});
 
+  final Function toFlutter;
+  final Function toFigma;
+  final Function toFlutterWeb;
+
+  @override
+  State<CoreSkillViewWeb> createState() => _CoreSkillViewWebState();
+}
+
+class _CoreSkillViewWebState extends State<CoreSkillViewWeb> {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -33,21 +46,43 @@ class CoreSkillViewWeb extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ImageWithStackedButton(
-                  image: "assets/images/flutter.png",
-                  onPressed: () {},
-                  text: 'Flutter',
+                SizedBox(width: MediaQuery.of(context).size.width / 8),
+                Expanded(
+                  child: ImageWithStackedButton(
+                    image: "assets/images/flutter.png",
+                    onPressed: () {
+                      setState(() {
+                        widget.toFlutter();
+                      });
+                    },
+                    text: 'Flutter',
+                  ),
                 ),
-                ImageWithStackedButton(
-                  image: "assets/images/figma.png",
-                  onPressed: () {},
-                  text: 'Figma Designs',
+                SizedBox(width: 40),
+                Expanded(
+                  child: ImageWithStackedButton(
+                    image: "assets/images/figma.png",
+                    onPressed: () {
+                      setState(() {
+                        widget.toFigma();
+                      });
+                    },
+                    text: 'Figma Designs',
+                  ),
                 ),
-                ImageWithStackedButton(
-                  image: "assets/images/backend.png",
-                  onPressed: () {},
-                  text: 'Backend',
+                SizedBox(width: 40),
+                Expanded(
+                  child: ImageWithStackedButton(
+                    image: "assets/images/backend.png",
+                    onPressed: () {
+                      setState(() {
+                        widget.toFlutterWeb();
+                      });
+                    },
+                    text: 'Backend',
+                  ),
                 ),
+                SizedBox(width: MediaQuery.of(context).size.width / 8),
               ],
             ),
             SizedBox(height: MediaQuery.of(context).size.height / 10),

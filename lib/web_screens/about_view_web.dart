@@ -10,7 +10,7 @@ class AboutViewWeb extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.symmetric(
             horizontal: MediaQuery.of(context).size.width / 20),
-        height: MediaQuery.of(context).size.height,
+        height: MediaQuery.of(context).size.height * 0.8,
         color: Colors.white,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -19,7 +19,7 @@ class AboutViewWeb extends StatelessWidget {
                 height: 500,
                 width: 500,
                 child: Image.asset("assets/images/nabeel.png")),
-            SizedBox(width: MediaQuery.of(context).size.width / 8),
+            SizedBox(width: MediaQuery.of(context).size.width / 16),
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -47,18 +47,21 @@ class AboutViewWeb extends StatelessWidget {
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height / 60),
                   Text(
-                    "I’ve been working on flutter projects for over 3 years now.  From the start of my college years. Also I’ve been involved in making various applications from scratch to finish. ",
+                    "I’ve been working with Flutter for over three years, starting from my college days. I’ve created and launched several applications, handling everything from initial design in Figma to coding both front-end and back-end. My experience spans working in small teams and building applications from scratch, taking on multiple roles throughout the development process.",
                     style: kSmallParaTextStyle,
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height / 40),
                   Text(
-                    "I have designed myself over 10s of applications from scratch been involved in Figma designs, requirements gathering and defining. Also, designing the database.Code of frontend and backend everything. Launched 2 to 3 apps to play store.",
+                    "I’ve designed and built over ten unique applications, focusing on making them stand out in terms of UI and UX. I thrive on doing things differently, ensuring my apps offer an exceptional user experience. So far, I’ve successfully launched 2 to 3 apps on the Play Store.",
                     style: kSmallParaTextStyle,
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height / 6),
                 ],
               ),
             ),
+            SizedBox(
+              width: 80,
+            )
           ],
         ),
       ),

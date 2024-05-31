@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "743160202817",
+    "project_id": "personal-portfolio-38fdf",
+    "storage_bucket": "personal-portfolio-38fdf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:743160202817:android:a6386fcfad7fc9996ca8c0",
+        "android_client_info": {
+          "package_name": "com.example.personal_portfolio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi1OphVNt2d7QWknafFioeF_5pknTSebc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

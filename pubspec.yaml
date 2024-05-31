@@ -38,6 +38,7 @@ dependencies:
   url_launcher: ^6.1.5
   scrollable_positioned_list: ^0.3.2
   animated_text_kit: ^4.2.2
+  carousel_slider: ^4.2.1
   file_picker: ^5.2.6
   image_picker: ^0.8.7
   firebase_core: ^2.8.0
