@@ -9,7 +9,7 @@ class FooterMobileView extends StatelessWidget {
   void _sendEmail() async {
     final Uri _emailLaunchUri = Uri(
         scheme: 'mailto',
-        path: "mnabeel1424@gmail.com",
+        path: "ansariabdurrahman614@gmail.com",
         queryParameters: {'subject': 'Hello from your website!'});
 
     try {
@@ -31,7 +31,7 @@ class FooterMobileView extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                alignment: Alignment.center,
+                alignment: Alignment.centerLeft,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -39,7 +39,7 @@ class FooterMobileView extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * 0.05,
                     ),
                     Text(
-                      "Let's Connect!",
+                      "Let's Connect !",
                       style: kSubHeadingTextStyle.copyWith(color: Colors.white),
                     ),
                     SizedBox(
@@ -50,19 +50,21 @@ class FooterMobileView extends StatelessWidget {
                             minimumSize: MaterialStateProperty.all<Size>(
                                 const Size(150, 50)),
                             maximumSize: MaterialStateProperty.all<Size>(
-                                const Size(150, 50)),
+                                const Size(170, 50)),
                             backgroundColor: MaterialStateProperty.all<Color>(
                                 OrangeCustomColor),
                             shape: MaterialStateProperty.all<
                                     RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(25)))),
-                        onPressed: () {},
+                        onPressed: () {
+                          _sendEmail();
+                        },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "Hire Me",
+                              "Contact Me",
                               style: kButtonBigTextStyle.copyWith(
                                   color: Colors.white),
                             ),
@@ -98,14 +100,61 @@ class FooterMobileView extends StatelessWidget {
                   SizedBox(
                     height: MediaQuery.of(context).size.width * 0.05,
                   ),
-                  Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Column(
+                  Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Quick Links",
+                            style: kSmallParaTextStyle.copyWith(
+                                color: OrangeCustomColor),
+                          ),
+                          const SizedBox(
+                            height: 6,
+                          ),
+                          InkWell(
+                            onTap: () {
+                              // toHome();
+                            },
+                            onHover: (val) {},
+                            child: Text(
+                              "About",
+                              style: kSmallParaTextStyle.copyWith(
+                                  color: Colors.white, fontSize: 14),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 6,
+                          ),
+                          Text(
+                            "Core Skills",
+                            style: kSmallParaTextStyle.copyWith(
+                                color: Colors.white, fontSize: 14),
+                          ),
+                          const SizedBox(
+                            height: 6,
+                          ),
+                          Text("Projects",
+                              style: kSmallParaTextStyle.copyWith(
+                                  color: Colors.white, fontSize: 14)),
+                          const SizedBox(
+                            height: 6,
+                          ),
+                          Text("Contact",
+                              style: kSmallParaTextStyle.copyWith(
+                                  color: Colors.white, fontSize: 14)),
+                        ],
+                      ),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width / 10,
+                      ),
+                      Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Quick Links",
+                              "Contact",
                               style: kSmallParaTextStyle.copyWith(
                                   color: OrangeCustomColor),
                             ),
@@ -114,100 +163,53 @@ class FooterMobileView extends StatelessWidget {
                             ),
                             InkWell(
                               onTap: () {
-                                // toHome();
+                                _sendEmail();
                               },
-                              onHover: (val) {},
-                              child: Text(
-                                "About",
-                                style: kSmallParaTextStyle.copyWith(
-                                    color: Colors.white, fontSize: 14),
-                              ),
+                              child: Text("Email",
+                                  style: kSmallParaTextStyle.copyWith(
+                                      color: Colors.white, fontSize: 14)),
                             ),
                             const SizedBox(
                               height: 6,
                             ),
-                            Text(
-                              "Core Skills",
-                              style: kSmallParaTextStyle.copyWith(
-                                  color: Colors.white, fontSize: 14),
+                            InkWell(
+                              onTap: () {
+                                String url =
+                                    "https://www.linkedin.com/in/abdurrahmanansari61/";
+                                launchUrl(Uri.parse(url));
+                              },
+                              child: Text("LinkedIn",
+                                  style: kSmallParaTextStyle.copyWith(
+                                      color: Colors.white, fontSize: 14)),
                             ),
                             const SizedBox(
                               height: 6,
                             ),
-                            Text("Projects",
-                                style: kSmallParaTextStyle.copyWith(
-                                    color: Colors.white, fontSize: 14)),
+                            InkWell(
+                              onTap: () {
+                                String url = "https://github.com/codeslayr";
+                                launchUrl(Uri.parse(url));
+                              },
+                              child: Text("Github",
+                                  style: kSmallParaTextStyle.copyWith(
+                                      color: Colors.white, fontSize: 14)),
+                            ),
                             const SizedBox(
                               height: 6,
                             ),
-                            Text("Contact",
-                                style: kSmallParaTextStyle.copyWith(
-                                    color: Colors.white, fontSize: 14)),
-                          ],
-                        ),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.width * 0.05,
-                        ),
-                        Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Socials",
-                                style: kSmallParaTextStyle.copyWith(
-                                    color: OrangeCustomColor),
-                              ),
-                              const SizedBox(
-                                height: 6,
-                              ),
-                              InkWell(
-                                onTap: () {
-                                  _sendEmail();
-                                },
-                                child: Text("Email",
-                                    style: kSmallParaTextStyle.copyWith(
-                                        color: Colors.white, fontSize: 14)),
-                              ),
-                              const SizedBox(
-                                height: 6,
-                              ),
-                              InkWell(
-                                onTap: () {
-                                  String url =
-                                      "https://www.linkedin.com/in/nabeelmirza7/";
-                                  launchUrl(Uri.parse(url));
-                                },
-                                child: Text("LinkedIn",
-                                    style: kSmallParaTextStyle.copyWith(
-                                        color: Colors.white, fontSize: 14)),
-                              ),
-                              const SizedBox(
-                                height: 6,
-                              ),
-                              InkWell(
-                                onTap: () {
-                                  String url =
-                                      "https://github.com/drocgoesongit";
-                                  launchUrl(Uri.parse(url));
-                                },
-                                child: Text("Github",
-                                    style: kSmallParaTextStyle.copyWith(
-                                        color: Colors.white, fontSize: 14)),
-                              ),
-                              const SizedBox(
-                                height: 6,
-                              ),
-                              InkWell(
-                                onTap: () {
-                                  String url =
-                                      "https://twitter.com/NabeelM08239730";
-                                  launchUrl(Uri.parse(url));
-                                },
-                                child: Text("Twitter",
-                                    style: kSmallParaTextStyle.copyWith(
-                                        color: Colors.white, fontSize: 14)),
-                              ),
-                            ])
-                      ]),
+                            InkWell(
+                              onTap: () {
+                                String url =
+                                    "https://www.instagram.com/weirdo__61";
+                                launchUrl(Uri.parse(url));
+                              },
+                              child: Text("Instagram",
+                                  style: kSmallParaTextStyle.copyWith(
+                                      color: Colors.white, fontSize: 14)),
+                            ),
+                          ]),
+                    ],
+                  ),
                   // Expanded(
                   //   flex: 1,
                   //   child: Container(),
@@ -227,7 +229,7 @@ class FooterMobileView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "© 2024 Nabeel Mirza All Rights Reserved - V 1.0.1",
+                    "© 2024 Abdurrahman Ansari All Rights Reserved - V 1.0.1",
                     style:
                         kExtraSmallParaTextStyle.copyWith(color: Colors.white),
                   ),

@@ -53,11 +53,11 @@ class SkillViewWeb extends StatelessWidget {
                     ),
                     CustomContainer(
                         width: 712,
-                        height: 235,
+                        height: 240,
                         image: 'assets/images/firebase.png',
                         title: "Firebase",
                         subtitle:
-                            "Firebase Firestore, Firebase Authentication and more",
+                            "Firebase Firestore, Firebase Authentication and more.",
                         image2: 'assets/images/firebase2.png',
                         i2width: 222,
                         i2height: 200)

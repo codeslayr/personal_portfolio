@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/constants/text_consts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomeViewWeb extends StatefulWidget {
   const HomeViewWeb({
@@ -77,7 +78,7 @@ class _HomeViewWebState extends State<HomeViewWeb> {
                     ],
                   ),
                   Text(
-                    "AR",
+                    "AA",
                     style: kSmallParaTextStyle.copyWith(color: Colors.white),
                   ),
                   Row(
@@ -101,6 +102,17 @@ class _HomeViewWebState extends State<HomeViewWeb> {
                         },
                         child: _buildNavItem('Contact', _selectedIndex == 5),
                       ),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            _selectedIndex = 6;
+                            String url =
+                                "https://drive.google.com/file/d/1cKCP8J-W7ktVFwunCXPYxs8xGpkcvNu5/view?usp=sharing";
+                            launchUrl(Uri.parse(url));
+                          });
+                        },
+                        child: _buildNavItem('Resume', _selectedIndex == 6),
+                      ),
                     ],
                   ),
                 ],
@@ -108,41 +120,38 @@ class _HomeViewWebState extends State<HomeViewWeb> {
             ),
           ),
         ),
-        body: Container(
-          // color: Colors.black,
-          child: Stack(
-            children: [
-              Image.asset(
-                "assets/images/hero.png",
-                width: double.infinity, // Take full width of the container
-                fit: BoxFit.cover, // Cover the entire space
+        body: Stack(
+          children: [
+            Image.asset(
+              "assets/images/hero3.png",
+              width: double.infinity, // Take full width of the container
+              fit: BoxFit.cover, // Cover the entire space
+            ),
+            Positioned(
+              top: 120,
+              left: 200,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "I'm Ansari\nAbdurrahman.",
+                    style: kMainTitleBoldTextStyle.copyWith(fontSize: 140),
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height / 40,
+                  ),
+                  Text(
+                    "Flutter Full Stack Developer",
+                    style: kMediumParaTextStyle.copyWith(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 40,
+                        letterSpacing: -2,
+                        color: Colors.black.withOpacity(0.8)),
+                  ),
+                ],
               ),
-              Positioned(
-                top: 120,
-                left: 200,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "I'm Nabeel\nMirza.",
-                      style: kMainTitleBoldTextStyle.copyWith(fontSize: 140),
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height / 40,
-                    ),
-                    Text(
-                      "Flutter Full Stack Developer",
-                      style: kMediumParaTextStyle.copyWith(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 40,
-                          letterSpacing: -2,
-                          color: Colors.black.withOpacity(0.8)),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

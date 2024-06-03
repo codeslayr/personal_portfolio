@@ -111,7 +111,7 @@ class FlutterViewMobile extends StatelessWidget {
                               fit: BoxFit.fill)),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: MediaQuery.of(context).size.height / 20),
                 ],
               ),
             ),
@@ -120,7 +120,7 @@ class FlutterViewMobile extends StatelessWidget {
                 SizedBox(
                   height: 50, // Fixed height for the Marquee widget
                   child: Marquee(
-                    text: 'Flutter Web · Figma . ',
+                    text: 'Flutter Web & Figma ·',
                     style: kSubHeadingTextStyle,
                     scrollAxis: Axis.horizontal,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -129,7 +129,7 @@ class FlutterViewMobile extends StatelessWidget {
                     startPadding: 10.0,
                   ),
                 ),
-                SizedBox(height: MediaQuery.of(context).size.height / 20),
+                SizedBox(height: MediaQuery.of(context).size.height / 60),
               ],
             ),
             Padding(

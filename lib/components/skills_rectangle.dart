@@ -45,8 +45,10 @@ class CustomContainer extends StatelessWidget {
                 Text(title,
                     style: kMediumParaTextStyle.copyWith(color: Colors.white)),
                 SizedBox(height: 8),
-                Text(subtitle,
-                    style: kSmallParaTextStyle.copyWith(color: Colors.white)),
+                Text(
+                  subtitle,
+                  style: kSmallParaTextStyle.copyWith(color: Colors.white),
+                ),
                 SizedBox(height: 16),
               ],
             ),

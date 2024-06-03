@@ -45,42 +45,52 @@ class _HomeViewMobileState extends State<HomeViewMobile> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("N M",
+                        Text("A R",
                             style: kMainTitleBoldTextStyle.copyWith(
                                 fontSize: 28,
                                 color: Colors.white.withOpacity(0.8))),
                         // SizedBox(width: 20),
                       ],
                     )),
-                Container(
-                  height: MediaQuery.of(context).size.height - 180,
-                  width: MediaQuery.of(context).size.width,
-                  // color: Colors.black,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "I'm\nNabeel\nMirza.",
-                        style: kMainTitleBoldTextStyle.copyWith(
-                          fontSize: 60,
-                          letterSpacing: -2,
-                          height: 1.0,
-                        ),
+                Stack(
+                  children: [
+                    Image.asset(
+                      "assets/images/hero2.png",
+                      width:
+                          double.infinity, // Take full width of the container
+                      fit: BoxFit.cover, // Cover the entire space
+                    ),
+                    Container(
+                      height: MediaQuery.of(context).size.height - 180,
+                      width: MediaQuery.of(context).size.width,
+                      // color: Colors.black,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "I'm\nAnsari\nAbdurrahman.",
+                            style: kMainTitleBoldTextStyle.copyWith(
+                              fontSize: 55,
+                              letterSpacing: -2,
+                              height: 1.0,
+                            ),
+                          ),
+                          SizedBox(
+                            height: MediaQuery.of(context).size.height / 40,
+                          ),
+                          Text(
+                            "Flutter Full \nStack Developer",
+                            style: kMediumParaTextStyle.copyWith(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 24,
+                                letterSpacing: -1,
+                                color: Colors.black.withOpacity(0.8)),
+                          ),
+                        ],
                       ),
-                      SizedBox(
-                        height: MediaQuery.of(context).size.height / 40,
-                      ),
-                      Text(
-                        "Flutter Full \nStack Developer",
-                        style: kMediumParaTextStyle.copyWith(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 24,
-                            letterSpacing: -1,
-                            color: Colors.black.withOpacity(0.8)),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
                 Container(
                     width: double.infinity,

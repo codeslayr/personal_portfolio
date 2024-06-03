@@ -38,7 +38,7 @@ class AboutViewMobile extends StatelessWidget {
             Container(
                 height: 500,
                 width: 500,
-                child: Image.asset("assets/images/nabeel.png")),
+                child: Image.asset("assets/images/abd.png")),
             SizedBox(height: MediaQuery.of(context).size.width / 8),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -46,7 +46,7 @@ class AboutViewMobile extends StatelessWidget {
               children: [
                 SizedBox(height: MediaQuery.of(context).size.height / 60),
                 Text(
-                  "I’ve been working with Flutter for over three years, starting from my college days. I’ve created and launched several applications, handling everything from initial design in Figma to coding both front-end and back-end. My experience spans working in small teams and building applications from scratch, taking on multiple roles throughout the development process.",
+                  "I’ve been working with Flutter for over three years, starting from my college days. I’ve created and deployed several applications, handling everything from initial design in Figma to coding both front-end and back-end. My experience spans working in small teams and building applications from scratch, taking on multiple roles throughout the development process.",
                   style: kSmallParaTextStyle,
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height / 40),

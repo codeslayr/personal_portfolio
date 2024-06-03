@@ -11,7 +11,7 @@ class FooterWebView extends StatelessWidget {
   void _sendEmail() async {
     final Uri _emailLaunchUri = Uri(
         scheme: 'mailto',
-        path: "mnabeel1424@gmail.com",
+        path: "ansariabdurrahman614@gmail.com",
         queryParameters: {'subject': 'Hello from your website!'});
 
     try {
@@ -38,7 +38,7 @@ class FooterWebView extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      "Let's Connect!",
+                      "Let's Connect !",
                       style: kSubHeadingTextStyle.copyWith(color: Colors.white),
                     ),
                     Expanded(
@@ -150,6 +150,19 @@ class FooterWebView extends StatelessWidget {
                                 style: kSmallParaTextStyle.copyWith(
                                     color: Colors.white, fontSize: 14),
                               ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  String url =
+                                      "https://drive.google.com/file/d/1cKCP8J-W7ktVFwunCXPYxs8xGpkcvNu5/view?usp=sharing";
+                                  launchUrl(Uri.parse(url));
+                                },
+                                child: Text("Resume",
+                                    style: kSmallParaTextStyle.copyWith(
+                                        color: Colors.white, fontSize: 14)),
+                              ),
                             ],
                           ),
                           SizedBox(
@@ -179,8 +192,7 @@ class FooterWebView extends StatelessWidget {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                    String url =
-                                        "https://github.com/drocgoesongit";
+                                    String url = "https://github.com/codeslayr";
                                     launchUrl(Uri.parse(url));
                                   },
                                   child: Text("Github",
@@ -193,7 +205,7 @@ class FooterWebView extends StatelessWidget {
                                 InkWell(
                                   onTap: () {
                                     String url =
-                                        "https://www.linkedin.com/in/nabeelmirza7/";
+                                        "https://www.linkedin.com/in/abdurrahmanansari61/";
                                     launchUrl(Uri.parse(url));
                                   },
                                   child: Text("LinkedIn",
@@ -206,10 +218,10 @@ class FooterWebView extends StatelessWidget {
                                 InkWell(
                                   onTap: () {
                                     String url =
-                                        "https://twitter.com/NabeelM08239730";
+                                        "https://www.instagram.com/weirdo__61";
                                     launchUrl(Uri.parse(url));
                                   },
-                                  child: Text("Twitter",
+                                  child: Text("Instagram",
                                       style: kSmallParaTextStyle.copyWith(
                                           color: Colors.white, fontSize: 14)),
                                 ),
@@ -236,7 +248,7 @@ class FooterWebView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "© 2024 Nabeel Mirza All Rights Reserved",
+                    "© 2024 Abdurrahman Ansari All Rights Reserved",
                     style:
                         kExtraSmallParaTextStyle.copyWith(color: Colors.white),
                   ),
