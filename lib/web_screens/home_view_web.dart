@@ -77,7 +77,7 @@ class _HomeViewWebState extends State<HomeViewWeb> {
                     ],
                   ),
                   Text(
-                    "NM",
+                    "AR",
                     style: kSmallParaTextStyle.copyWith(color: Colors.white),
                   ),
                   Row(
