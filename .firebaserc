@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "personal-portfolio-38fdf"
-  }
+    "default": "personal-portfolio-55854",
+    "public": "personal-portfolio-55854"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }

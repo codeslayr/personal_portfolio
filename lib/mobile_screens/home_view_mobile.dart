@@ -71,7 +71,7 @@ class _HomeViewMobileState extends State<HomeViewMobile> {
                           Text(
                             "I'm\nAnsari\nAbdurrahman.",
                             style: kMainTitleBoldTextStyle.copyWith(
-                              fontSize: 55,
+                              fontSize: 50,
                               letterSpacing: -2,
                               height: 1.0,
                             ),
@@ -80,7 +80,7 @@ class _HomeViewMobileState extends State<HomeViewMobile> {
                             height: MediaQuery.of(context).size.height / 40,
                           ),
                           Text(
-                            "Flutter Full \nStack Developer",
+                            "Flutter Developer",
                             style: kMediumParaTextStyle.copyWith(
                                 fontWeight: FontWeight.w500,
                                 fontSize: 24,

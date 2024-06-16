@@ -46,12 +46,12 @@ class AboutViewMobile extends StatelessWidget {
               children: [
                 SizedBox(height: MediaQuery.of(context).size.height / 60),
                 Text(
-                  "I’ve been working with Flutter for over three years, starting from my college days. I’ve created and deployed several applications, handling everything from initial design in Figma to coding both front-end and back-end. My experience spans working in small teams and building applications from scratch, taking on multiple roles throughout the development process.",
+                  "I have been actively working with Flutter for approximately three years, beginning during my college tenure. Throughout this period, I have successfully created and deployed multiple applications, managing the entire process from initial design in Figma to front-end development. My experience encompasses collaborating in small teams and building applications from the ground up, where I have undertaken various roles throughout the development lifecycle.",
                   style: kSmallParaTextStyle,
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height / 40),
                 Text(
-                  "I’ve designed and built over ten unique applications, focusing on making them stand out in terms of UI and UX. I thrive on doing things differently, ensuring my apps offer an exceptional user experience. So far, I’ve successfully launched 2 to 3 apps on the Play Store.",
+                  "I have designed and developed over ten unique applications, with a strong emphasis on delivering outstanding user interfaces (UI) and user experiences (UX). My approach is characterized by innovation and a commitment to creating exceptional and distinctive applications. To date, I have successfully launched 2 to 3 apps on the Play Store.",
                   style: kSmallParaTextStyle,
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height / 12),

@@ -70,13 +70,13 @@ class _CoreSkillViewMobileState extends State<CoreSkillViewMobile> {
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.05),
                   ImageWithStackedButton(
-                    image: "assets/images/backend.png",
+                    image: "assets/images/dart.png",
                     onPressed: () {
                       setState(() {
                         widget.toFlutterWeb();
                       });
                     },
-                    text: 'Backend',
+                    text: 'Frontend',
                   ),
                   SizedBox(height: MediaQuery.of(context).size.height * 0.05),
                 ],

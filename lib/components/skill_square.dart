@@ -39,8 +39,8 @@ class ImageWithStackedButton extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    bottom: 20,
-                    right: 40,
+                    bottom: 18,
+                    right: 18,
                     child: _buildStackedButton(),
                   ),
                 ],

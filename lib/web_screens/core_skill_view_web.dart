@@ -73,13 +73,13 @@ class _CoreSkillViewWebState extends State<CoreSkillViewWeb> {
                 SizedBox(width: 40),
                 Expanded(
                   child: ImageWithStackedButton(
-                    image: "assets/images/backend.png",
+                    image: "assets/images/dart.png",
                     onPressed: () {
                       setState(() {
                         widget.toFlutterWeb();
                       });
                     },
-                    text: 'Backend',
+                    text: 'Frontend',
                   ),
                 ),
                 SizedBox(width: MediaQuery.of(context).size.width / 8),

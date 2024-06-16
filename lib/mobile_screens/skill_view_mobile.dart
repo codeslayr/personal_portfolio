@@ -72,15 +72,14 @@ class SkillViewMobile extends StatelessWidget {
                       icon: 'assets/images/web.png',
                       title: 'Web',
                       description:
-                          'Have a profound experience in git and github.',
+                          'Utilizing Flutter web for websites & web applications.',
                       image: 'assets/images/web2.png',
                     ),
                     SizedBox(height: MediaQuery.of(context).size.height / 20),
                     MobileSkillCard(
                       icon: 'assets/images/postman.png',
                       title: 'Postman',
-                      description:
-                          'Have a profound experience in git and github.',
+                      description: 'Testing APIs and automating using postman.',
                       image: 'assets/images/postman2.png',
                     ),
                   ],

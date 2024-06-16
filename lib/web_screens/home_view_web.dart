@@ -141,7 +141,7 @@ class _HomeViewWebState extends State<HomeViewWeb> {
                     height: MediaQuery.of(context).size.height / 40,
                   ),
                   Text(
-                    "Flutter Full Stack Developer",
+                    "Flutter Developer",
                     style: kMediumParaTextStyle.copyWith(
                         fontWeight: FontWeight.w500,
                         fontSize: 40,

@@ -145,6 +145,19 @@ class FooterMobileView extends StatelessWidget {
                           Text("Contact",
                               style: kSmallParaTextStyle.copyWith(
                                   color: Colors.white, fontSize: 14)),
+                          const SizedBox(
+                            height: 6,
+                          ),
+                          InkWell(
+                            onTap: () {
+                              String url =
+                                  "https://drive.google.com/file/d/1cKCP8J-W7ktVFwunCXPYxs8xGpkcvNu5/view?usp=sharing";
+                              launchUrl(Uri.parse(url));
+                            },
+                            child: Text("Resume",
+                                style: kSmallParaTextStyle.copyWith(
+                                    color: Colors.white, fontSize: 14)),
+                          ),
                         ],
                       ),
                       SizedBox(
